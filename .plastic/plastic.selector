@@ -1,0 +1,4 @@
+repository "TetraCity@yang_zya@cloud"
+  path "/"
+    br "/main"
+    co "/main"
