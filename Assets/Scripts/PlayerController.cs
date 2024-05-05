@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
          // If inputmanager drop button is pressed
-        if (Input.GetButtonDown("Drop"))
+        if (Input.GetButtonDown("Drop") && BlockSpawner.isBlockDropped == false)
         {
-            // DropBlock();
+            BlockSpawner.DropBlock();
+            BlockSpawner.isBlockDropped = true;
         }
 
         // If inputmanager horizontal negative buttons are pressed
