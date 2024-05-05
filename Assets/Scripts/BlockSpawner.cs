@@ -8,12 +8,35 @@ public class BlockSpawner : MonoBehaviour
 
     public static GameObject currentBlock;
 
+    public static bool isBlockSpawned = false;
+    public static bool isBlockDropped = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        SpawnObject();
+    }
+
+    void SpawnObject()
+    {
         currentBlock = Instantiate(blocks[Random.Range(0, blocks.Length)],
                                    transform.position,
-                                   Quaternion.identity);
+                                   transform.rotation);
+        currentBlock.transform.SetParent(transform, true);
+
+        isBlockSpawned = true;
+    }
+
+    public static void DropBlock()
+    {
+        if (!isBlockDropped)
+        {
+            Rigidbody currentRb = currentBlock.GetComponent<Rigidbody>();
+            currentRb.useGravity = true;
+
+            isBlockDropped = true;
+        }
     }
 
     // Update is called once per frame
@@ -21,7 +44,8 @@ public class BlockSpawner : MonoBehaviour
     {
         if (Input.GetButtonDown("Drop"))
         {
-
+            Rigidbody currentRb = currentBlock.GetComponent<Rigidbody>();
+            currentRb.useGravity = true;
         }
     }
 }
