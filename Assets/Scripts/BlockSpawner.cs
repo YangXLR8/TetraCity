@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] blocks;
+    [SerializeField] private List<GameObject> blocks = new();
+
+    public static List<GameObject> spawnedBlocks = new();
 
     public static GameObject currentBlock;
 
@@ -18,9 +20,14 @@ public class BlockSpawner : MonoBehaviour
 
     }
 
+    public static void SaveBlock()
+    {
+        spawnedBlocks.Add(currentBlock);
+    }
+
     void SpawnBlock()
     {
-        currentBlock = Instantiate(blocks[Random.Range(0, blocks.Length)],
+        currentBlock = Instantiate(blocks[Random.Range(0, blocks.Count)],
                                    transform.position,
                                    transform.rotation);
         currentBlock.transform.SetParent(transform, true);
@@ -32,6 +39,8 @@ public class BlockSpawner : MonoBehaviour
     {
         if (!isBlockDropped)
         {
+            currentBlock.transform.SetParent(null);
+
             Rigidbody currentRb = currentBlock.GetComponent<Rigidbody>();
             currentRb.useGravity = true;
 

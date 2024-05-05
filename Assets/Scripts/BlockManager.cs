@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BlockManager : MonoBehaviour
 {
+    private bool isDropped = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,13 @@ public class BlockManager : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Ground"))
+        if (!other.gameObject.CompareTag("Ground") && !isDropped)
         {
             BlockSpawner.isBlockDropped = false;
             BlockSpawner.isBlockSpawned = false;
+
+            BlockSpawner.SaveBlock();
+            isDropped = true;
         }
     }
 }

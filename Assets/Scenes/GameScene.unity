@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -338,13 +338,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102342021}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 11, z: -6.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -0.05714287}
+  m_LocalScale: {x: 0.028571429, y: 0.028571427, z: 0.028571434}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_Father: {fileID: 954763293}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1001 &120323086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -911,13 +911,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
       propertyPath: m_Name
-      value: Claw crane game
+      value: Claw
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 102342023}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 954763294}
   m_SourcePrefab: {fileID: 100100000, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
+--- !u!1 &954763292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
+  m_PrefabInstance: {fileID: 954763291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &954763293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 246bf229dd8315d458bb9bf445384614, type: 3}
+  m_PrefabInstance: {fileID: 954763291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954763294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954763292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ed6889e9936a047b32b75ec826edb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftLimit: -4.5
+  rightLimit: 4.5
+  moveSpeed: 2
+  mainCamera: {fileID: 1373762831}
 --- !u!1 &983902630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,5 +1412,4 @@ SceneRoots:
   - {fileID: 699239232}
   - {fileID: 71842290}
   - {fileID: 1618029220}
-  - {fileID: 102342023}
   - {fileID: 954763291}
