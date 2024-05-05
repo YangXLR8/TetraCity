@@ -47,9 +47,6 @@ public class BlockSpawner : MonoBehaviour
             SpawnBlock();
         }
 
-        if (Input.GetButtonDown("Drop"))
-        {
-            DropBlock();
-        }
+        
     }
 }
