@@ -15,10 +15,10 @@ public class BlockSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnObject();
+
     }
 
-    void SpawnObject()
+    void SpawnBlock()
     {
         currentBlock = Instantiate(blocks[Random.Range(0, blocks.Length)],
                                    transform.position,
@@ -42,10 +42,14 @@ public class BlockSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isBlockSpawned)
+        {
+            SpawnBlock();
+        }
+
         if (Input.GetButtonDown("Drop"))
         {
-            Rigidbody currentRb = currentBlock.GetComponent<Rigidbody>();
-            currentRb.useGravity = true;
+            DropBlock();
         }
     }
 }

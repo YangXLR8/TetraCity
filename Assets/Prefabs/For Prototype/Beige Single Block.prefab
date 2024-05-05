@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7066971510001388927}
   - component: {fileID: 4112439946183199344}
   - component: {fileID: -8989712019630196747}
+  - component: {fileID: 8950654330268557924}
   m_Layer: 0
   m_Name: Beige Single Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.646354, y: 9.341386, z: 9.122447}
   m_Center: {x: 0, y: 4.670693, z: 0}
+--- !u!114 &8950654330268557924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724054486783356074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ef4b054c990d64ea43176ec277878a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
