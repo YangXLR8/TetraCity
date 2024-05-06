@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rightLimit;
     [SerializeField] private float moveSpeed;
 
-    [Header("Camera")]
-    [SerializeField] private GameObject mainCamera;
+    [Header("Offsets")]
+    [SerializeField] private float offsetToTallest;
 
     private int direction = 1;
 
@@ -59,11 +59,10 @@ public class PlayerController : MonoBehaviour
 
     private void AdjustClaw()
     {
-        float offset = 13 - (transform.position.y - FindTallest());
+        float offset = offsetToTallest - (transform.position.y - BlockSpawner.FindTallest());
         if (offset > 0)
         {
             transform.position += Vector3.up * offset;
-            mainCamera.gameObject.transform.position += Vector3.up * offset;
         }
     }
 
@@ -72,19 +71,5 @@ public class PlayerController : MonoBehaviour
         transform.position += Vector3.right * moveSpeed * Time.deltaTime * direction;
         if (transform.position.x <= leftLimit) direction = 1;
         else if (transform.position.x >= rightLimit) direction = -1;
-    }
-
-    private float FindTallest()
-    {
-        float tallestY = 0;
-        foreach (GameObject gameObject in BlockSpawner.spawnedBlocks)
-        {
-            if (tallestY < gameObject.transform.position.y)
-            {
-                tallestY = gameObject.transform.position.y;
-            }
-        }
-
-        return tallestY;
     }
 }

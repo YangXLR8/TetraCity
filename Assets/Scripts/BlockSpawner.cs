@@ -20,6 +20,17 @@ public class BlockSpawner : MonoBehaviour
 
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (!isBlockSpawned)
+        {
+            SpawnBlock();
+        }
+
+        
+    }
+
     public static void SaveBlock()
     {
         spawnedBlocks.Add(currentBlock);
@@ -30,6 +41,7 @@ public class BlockSpawner : MonoBehaviour
         currentBlock = Instantiate(blocks[Random.Range(0, blocks.Count)],
                                    transform.position,
                                    transform.rotation);
+        // currentBlock.transform.eulerAngles = Vector3.zero;
         currentBlock.transform.SetParent(transform, true);
 
         isBlockSpawned = true;
@@ -48,14 +60,17 @@ public class BlockSpawner : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public static float FindTallest()
     {
-        if (!isBlockSpawned)
+        float tallestY = 0;
+        foreach (GameObject gameObject in BlockSpawner.spawnedBlocks)
         {
-            SpawnBlock();
+            if (tallestY < gameObject.transform.position.y)
+            {
+                tallestY = gameObject.transform.position.y;
+            }
         }
 
-        
+        return tallestY;
     }
 }
