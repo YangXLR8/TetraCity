@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   claw: {fileID: 954763292}
   offsetToTallest: 13
-  smoothTime: 2.5
+  smoothTime: 50
 --- !u!1001 &1391281839
 PrefabInstance:
   m_ObjectHideFlags: 0
