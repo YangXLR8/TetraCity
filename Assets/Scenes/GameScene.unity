@@ -950,6 +950,7 @@ MonoBehaviour:
   rightLimit: 4.5
   moveSpeed: 2
   offsetToTallest: 13
+  cameraSmoothTime: 50
 --- !u!1 &983902630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,9 +1118,8 @@ GameObject:
   - component: {fileID: 1373762834}
   - component: {fileID: 1373762833}
   - component: {fileID: 1373762832}
-  - component: {fileID: 1373762835}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Game Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,21 +1199,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1373762835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373762831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca37689ed839c5a4e94e41f8dcc3f624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  claw: {fileID: 954763292}
-  offsetToTallest: 13
-  smoothTime: 50
 --- !u!1001 &1391281839
 PrefabInstance:
   m_ObjectHideFlags: 0

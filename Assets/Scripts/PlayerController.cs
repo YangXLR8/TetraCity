@@ -11,13 +11,25 @@ public class PlayerController : MonoBehaviour
 
     [Header("Offsets")]
     [SerializeField] private float offsetToTallest;
+    [SerializeField] private float cameraSmoothTime;
+
+    private Vector3 clawCurrentVelocity;
+    private Vector3 clawTargetPosition;
+
+    private Vector3 cameraCurrentVelocity;
+    private Vector3 cameraTargetPosition;
+
+    private GameObject cameraObject;
 
     private int direction = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraObject = GameObject.Find("Game Camera");
+        cameraTargetPosition = cameraObject.transform.position;
+
+        clawTargetPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -57,12 +69,21 @@ public class PlayerController : MonoBehaviour
         AdjustClaw();
     }
 
+    private void LateUpdate()
+    {
+        cameraObject.transform.position = Vector3.SmoothDamp(cameraObject.transform.position, 
+                                                             cameraTargetPosition, 
+                                                             ref cameraCurrentVelocity, 
+                                                             cameraSmoothTime * Time.deltaTime);
+    }
+
     private void AdjustClaw()
     {
         float offset = offsetToTallest - (transform.position.y - BlockSpawner.FindTallest());
-        if (offset > 0)
+        if (offset != 0)
         {
             transform.position += Vector3.up * offset;
+            cameraTargetPosition += offset * Vector3.up;
         }
     }
 
