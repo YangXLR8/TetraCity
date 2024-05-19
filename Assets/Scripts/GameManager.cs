@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +19,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static GameObject fadeToBlackScreen;
+
     private void Awake()
     {
         _instance = this;
@@ -24,6 +28,10 @@ public class GameManager : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
-    }    
+        fadeToBlackScreen.SetActive(true);
+
+        PlayableDirector transition = fadeToBlackScreen.GetComponent<PlayableDirector>();
+        transition.stopped += (PlayableDirector dir) => { SceneManager.LoadScene("ChooseLevels", LoadSceneMode.Single); };
+        transition.Play();
+    }  
 }

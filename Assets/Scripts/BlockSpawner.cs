@@ -40,7 +40,7 @@ public class BlockSpawner : MonoBehaviour
     {
         currentBlock = Instantiate(blocks[Random.Range(0, blocks.Count)],
                                    transform.position,
-                                   transform.rotation);
+                                   Quaternion.identity);
         // currentBlock.transform.eulerAngles = Vector3.zero;
         currentBlock.transform.SetParent(transform, true);
 
