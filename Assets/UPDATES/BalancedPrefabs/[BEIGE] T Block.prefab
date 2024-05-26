@@ -443,8 +443,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4937031, y: 7.1476507, z: 1}
-  m_Center: {x: -1.2289556, y: 0.127038, z: 0}
+  m_Size: {x: 2.2214925, y: 6.8964195, z: 1.6054449}
+  m_Center: {x: -1.1799093, y: 0.10305929, z: -0.0048031807}
 --- !u!65 &4479979966667120924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.239301, y: 2.5405715, z: 1}
-  m_Center: {x: 1.1081024, y: 0.1339637, z: 0}
+  m_Size: {x: 2.1903844, y: 2.3308277, z: 1.83074}
+  m_Center: {x: 1.0251136, y: 0.1077044, z: 0.046798706}
 --- !u!114 &8381838393997548475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389c7dea678748540ba2a2106515c122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateOffset: {x: 0, y: 0, z: 0, w: 0}
+  rotateOffset: {x: 0, y: 90, z: 0, w: 0}
 --- !u!54 &94626084307855241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7469006022171896316}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -513,7 +513,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
