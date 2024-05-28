@@ -5,9 +5,10 @@ using UnityEngine;
 public class GameWinController : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         GameManager.gameWinUI = gameObject;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

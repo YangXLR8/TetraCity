@@ -68,7 +68,9 @@ public class GameManager : MonoBehaviour
 
     public void LoadStage(StageSetting stage)
     {
+        isGameOver = false;
         setting = stage;
+
         FadeScene(
             (PlayableDirector dir) => 
                 { 
@@ -86,5 +88,13 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         gameLoseUI.SetActive(true);
+        fadeToBlackScreen.transform.SetParent(gameLoseUI.transform, false);
+    }
+
+    public static void GameWin()
+    {
+        isGameOver = true;
+        gameWinUI.SetActive(true);
+        fadeToBlackScreen.transform.SetParent(gameWinUI.transform, false);
     }
 }

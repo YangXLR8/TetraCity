@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
          // If inputmanager drop button is pressed
-        if (Input.GetButtonDown("Drop") && BlockSpawner.isBlockDropped == false)
+        if (Input.GetButtonDown("Drop") && BlockSpawner.isBlockDropped == false && !GameManager.isGameOver)
         {
             BlockSpawner.DropBlock();
         }
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         // If inputmanager stash buttons are pressed
         if (Input.GetButtonDown("Stash"))
         {
-            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped)
+            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped && !GameManager.isGameOver)
             {
                 BlockSpawner.StashBlock();
             }
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         // If inputmanager rotate buttons are pressed
         if (Input.GetButtonDown("Rotate"))
         {
-            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped)
+            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped && !GameManager.isGameOver)
             {
                 BlockSpawner.RotateBlock();
             }

@@ -23,15 +23,28 @@ public class BlockManager : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Ground") && !isDropped)
         {
-            BlockSpawner.isBlockDropped = false;
-            BlockSpawner.isBlockSpawned = false;
+            if (!BlockSpawner.isLastBlock)
+            {
+                BlockSpawner.isBlockDropped = false;
+                BlockSpawner.isBlockSpawned = false;
 
-            BlockSpawner.SaveBlock();
-            isDropped = true;
+                BlockSpawner.SaveBlock();
+                isDropped = true;
+            }
+            else
+            {
+                for (int i = 0; i < BlockSpawner.spawnedBlocks.Count; i++)
+                {
+                    Rigidbody rb = BlockSpawner.spawnedBlocks[i].GetComponent<Rigidbody>();
+                    rb.isKinematic = false;
+                    rb.useGravity = false;
+                }
+                GameManager.GameWin();
+            }
         }
         if (other.gameObject.CompareTag("Ground"))
         {
-            GameManager.isGameOver = true;
+            GameManager.GameLose();
         }
     }
 }

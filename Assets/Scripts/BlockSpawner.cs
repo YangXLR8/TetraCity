@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject roofBlock;
+
     public static List<GameObject> spawnedBlocks = new();
 
     public static GameObject currentBlock;
@@ -12,6 +14,7 @@ public class BlockSpawner : MonoBehaviour
 
     public static bool isBlockSpawned = false;
     public static bool isBlockDropped = false;
+    public static bool isLastBlock = false;
 
     // [SerializeField] private List<GameObject> blocks = new();
     private List<GameObject> blocks = new();
@@ -19,6 +22,14 @@ public class BlockSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnedBlocks.Clear();
+        currentBlock = null;
+        stashedBlock = null;
+
+        isBlockSpawned = false;
+        isBlockDropped = false;
+        isLastBlock = false;
+
         LoadBlocks();
     }
 
@@ -65,9 +76,20 @@ public class BlockSpawner : MonoBehaviour
 
     void SpawnBlock()
     {
-        currentBlock = Instantiate(blocks[UnityEngine.Random.Range(0, blocks.Count)],
-                                   transform.position,
-                                   Quaternion.identity);
+        if (FindTallest() > GameManager.setting.height)
+        {
+            currentBlock = Instantiate(roofBlock,
+                                       transform.position,
+                                       Quaternion.identity);
+            isLastBlock = true;
+        }
+        else
+        {
+            currentBlock = Instantiate(blocks[UnityEngine.Random.Range(0, blocks.Count)],
+                                       transform.position,
+                                       Quaternion.identity);
+        }
+        
         // currentBlock.transform.eulerAngles = Vector3.zero;
         currentBlock.transform.SetParent(transform, true);
 
