@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class BlockManager : MonoBehaviour
 
             BlockSpawner.SaveBlock();
             isDropped = true;
+        }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

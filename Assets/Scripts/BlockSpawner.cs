@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
 {
-
     public static List<GameObject> spawnedBlocks = new();
 
     public static GameObject currentBlock;
@@ -12,6 +12,7 @@ public class BlockSpawner : MonoBehaviour
     public static bool isBlockSpawned = false;
     public static bool isBlockDropped = false;
 
+    // [SerializeField] private List<GameObject> blocks = new();
     private List<GameObject> blocks = new();
 
     // Start is called before the first frame update
@@ -34,9 +35,15 @@ public class BlockSpawner : MonoBehaviour
         spawnedBlocks.Add(currentBlock);
     }
 
+    public static void RotateBlock()
+    {
+        Vector3 position = currentBlock.GetComponent<Renderer>().bounds.center;
+        currentBlock.transform.RotateAround(position, new Vector3(0, 0, 90), -90);
+    }
+
     void SpawnBlock()
     {
-        currentBlock = Instantiate(blocks[Random.Range(0, blocks.Count)],
+        currentBlock = Instantiate(blocks[UnityEngine.Random.Range(0, blocks.Count)],
                                    transform.position,
                                    Quaternion.identity);
         // currentBlock.transform.eulerAngles = Vector3.zero;
@@ -61,7 +68,7 @@ public class BlockSpawner : MonoBehaviour
     public static float FindTallest()
     {
         float tallestY = 0;
-        foreach (GameObject gameObject in BlockSpawner.spawnedBlocks)
+        foreach (GameObject gameObject in spawnedBlocks)
         {
             if (tallestY < gameObject.transform.position.y)
             {
@@ -77,7 +84,6 @@ public class BlockSpawner : MonoBehaviour
         for (int i = 0; i < GameManager.setting.blocks.Count; i++)
         {
             blocks.Add(GameManager.setting.blocks[i]);
-            print(i);
         }
     }
 }

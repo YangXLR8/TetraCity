@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1126,6 +1126,7 @@ GameObject:
   - component: {fileID: 1389520033}
   - component: {fileID: 1389520032}
   - component: {fileID: 1389520031}
+  - component: {fileID: 1389520034}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1246,6 +1247,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389520029}
   m_CullTransparentMesh: 1
+--- !u!114 &1389520034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389520029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7988bcab3db78140aa0296f18472621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 1389520031}
 --- !u!1 &1433977202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,6 +1364,7 @@ GameObject:
   - component: {fileID: 1443683452}
   - component: {fileID: 1443683451}
   - component: {fileID: 1443683450}
+  - component: {fileID: 1443683453}
   m_Layer: 5
   m_Name: SL-2.1
   m_TagString: Untagged
@@ -1459,6 +1474,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443683448}
   m_CullTransparentMesh: 1
+--- !u!114 &1443683453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443683448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8098662225afd4e4da52da08f907c5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setting:
+    level: 2
+    id: 1
+    height: 5
+    blocks:
+    - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+  stageButton: {fileID: 1443683450}
 --- !u!1 &1463576487
 GameObject:
   m_ObjectHideFlags: 0

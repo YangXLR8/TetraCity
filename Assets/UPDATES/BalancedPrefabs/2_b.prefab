@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 8970866703499980867}
   - component: {fileID: -7551853675861366967}
   m_Layer: 0
-  m_Name: '[BEIGE] J Block'
+  m_Name: 2_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
