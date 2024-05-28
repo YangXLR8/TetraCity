@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d0b1c7b06101474d893104a7f000adb
+guid: f6f359d4648c91c4eb35ecab099cafde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blockShape_sprites_0
+      name: blockSprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1462f5f20b37a4a46828e8697d34a2d3
-      internalID: -1785246588
+      spriteID: 6ebaaf487963f514a968f35e3399a1de
+      internalID: -1306843328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_1
+      name: blockSprite_1
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 500
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fba6e359beb78ab49877e05ce6f5f464
-      internalID: -272653229
+      spriteID: 1a55c99da9f4c1249b51875767827a82
+      internalID: 586266172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_2
+      name: blockSprite_2
       rect:
         serializedVersion: 2
-        x: 2160
+        x: 1000
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 317da7ff6ba5be943b55b684fb545b40
-      internalID: 1019235417
+      spriteID: cd9aa8437be4afa49ac720ed65445959
+      internalID: 148017448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_3
+      name: blockSprite_3
       rect:
         serializedVersion: 2
-        x: 3240
+        x: 1500
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650d99f9703ac0f44817264c6d611b16
-      internalID: 124435419
+      spriteID: 40b1fce51c2646e4b92e30f2c94d66d8
+      internalID: 814783742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_4
+      name: blockSprite_4
       rect:
         serializedVersion: 2
-        x: 4320
+        x: 2000
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892f80414ba54f345b89f8e05b77973b
-      internalID: -825819360
+      spriteID: ac00e3267f1b2cc4e884759388fe9d02
+      internalID: 1936975419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_5
+      name: blockSprite_5
       rect:
         serializedVersion: 2
-        x: 5400
+        x: 2500
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15223e3369771d04bae4b7068e1f3b61
-      internalID: -353378116
+      spriteID: 33fd147cff05d804bb9016a0d689e6d4
+      internalID: 1759908410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_6
+      name: blockSprite_6
       rect:
         serializedVersion: 2
-        x: 6480
+        x: 3000
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd1226832ebbac47be639e5a51ab766
-      internalID: -1006100317
+      spriteID: 9b282cf4044f84245a4db019264d8816
+      internalID: 825522198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blockShape_sprites_7
+      name: blockSprite_7
       rect:
         serializedVersion: 2
-        x: 7560
+        x: 3500
         y: 0
-        width: 1080
-        height: 1920
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4bedbdcf8ccb7438a4e630811bd185
-      internalID: 2067684386
+      spriteID: 4e57bae419d7f744e9604ec5ddf22661
+      internalID: 67838094
       vertices: []
       indices: 
       edges: []
@@ -293,7 +293,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e8430f5c0146d884caee0c544c34dbf0
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blockShape_sprites_0: -1785246588
-      blockShape_sprites_1: -272653229
-      blockShape_sprites_2: 1019235417
-      blockShape_sprites_3: 124435419
-      blockShape_sprites_4: -825819360
-      blockShape_sprites_5: -353378116
-      blockShape_sprites_6: -1006100317
-      blockShape_sprites_7: 2067684386
+      blockSprite_0: -1306843328
+      blockSprite_1: 586266172
+      blockSprite_2: 148017448
+      blockSprite_3: 814783742
+      blockSprite_4: 1936975419
+      blockSprite_5: 1759908410
+      blockSprite_6: 825522198
+      blockSprite_7: 67838094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
