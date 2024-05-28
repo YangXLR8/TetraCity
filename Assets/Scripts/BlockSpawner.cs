@@ -8,6 +8,7 @@ public class BlockSpawner : MonoBehaviour
     public static List<GameObject> spawnedBlocks = new();
 
     public static GameObject currentBlock;
+    public static GameObject stashedBlock;
 
     public static bool isBlockSpawned = false;
     public static bool isBlockDropped = false;
@@ -39,6 +40,25 @@ public class BlockSpawner : MonoBehaviour
     {
         Vector3 position = currentBlock.GetComponent<Renderer>().bounds.center;
         currentBlock.transform.RotateAround(position, new Vector3(0, 0, 90), -90);
+    }
+
+    public static void StashBlock()
+    {
+        if (stashedBlock == null)
+        {
+            stashedBlock = currentBlock;
+            stashedBlock.SetActive(false);
+
+            isBlockSpawned = false;
+        }
+        else
+        {
+            GameObject temp = currentBlock;
+            temp.SetActive(false);
+
+            currentBlock = stashedBlock;
+            stashedBlock = temp;
+        }
     }
 
     void SpawnBlock()

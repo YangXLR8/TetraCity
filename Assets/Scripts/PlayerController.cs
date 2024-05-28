@@ -56,7 +56,10 @@ public class PlayerController : MonoBehaviour
         // If inputmanager stash buttons are pressed
         if (Input.GetButtonDown("Stash"))
         {
-            // AccessStashedBlock();
+            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped)
+            {
+                BlockSpawner.StashBlock();
+            }
         }
 
         // If inputmanager rotate buttons are pressed

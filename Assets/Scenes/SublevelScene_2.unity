@@ -1489,9 +1489,11 @@ MonoBehaviour:
   setting:
     level: 2
     id: 1
-    height: 5
+    height: 8
     blocks:
     - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+    - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+    - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
   stageButton: {fileID: 1443683450}
 --- !u!1 &1463576487
 GameObject:
