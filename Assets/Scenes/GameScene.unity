@@ -452,6 +452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocks:
   - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+  - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+  - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
+  - {fileID: 2384753024174117751, guid: aa88d271156e9467fba7dffa97e7f85f, type: 3}
 --- !u!4 &102342023
 Transform:
   m_ObjectHideFlags: 0

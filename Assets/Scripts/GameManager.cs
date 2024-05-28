@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal;
@@ -26,12 +27,22 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
-    public void LoadGameScene()
+    private void FadeTransition(Action<PlayableDirector> callback)
     {
         fadeToBlackScreen.SetActive(true);
 
         PlayableDirector transition = fadeToBlackScreen.GetComponent<PlayableDirector>();
-        transition.stopped += (PlayableDirector dir) => { SceneManager.LoadScene("ChooseLevels", LoadSceneMode.Single); };
+        transition.stopped += callback;
         transition.Play();
+    }
+
+    public void LoadScene(string scene)
+    {
+        FadeTransition(
+            (PlayableDirector dir) => 
+                { 
+                    SceneManager.LoadScene(scene, LoadSceneMode.Single); 
+                }
+        );
     }  
 }

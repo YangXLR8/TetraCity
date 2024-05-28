@@ -10,13 +10,18 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button playScene = playButton.GetComponent<Button>();
-        playScene.onClick.AddListener(GameManager.Instance.LoadGameScene);
+        OnClickChooseLevelsScene();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void OnClickChooseLevelsScene()
+    {
+        Button playScene = playButton.GetComponent<Button>();
+        playScene.onClick.AddListener(() => GameManager.Instance.LoadScene("ChooseLevels"));
     }
 }
