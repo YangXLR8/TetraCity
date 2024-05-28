@@ -62,7 +62,10 @@ public class PlayerController : MonoBehaviour
         // If inputmanager rotate buttons are pressed
         if (Input.GetButtonDown("Rotate"))
         {
-            // RotateBlockClockwise();
+            if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped)
+            {
+                BlockSpawner.RotateBlock();
+            }
         }
 
         MoveClaw();

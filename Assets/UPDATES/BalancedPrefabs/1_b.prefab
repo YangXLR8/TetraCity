@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8805227336183770019}
   - component: {fileID: -6175876772549223094}
   m_Layer: 0
-  m_Name: '[BEIGE] I Block 1'
+  m_Name: 1_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
