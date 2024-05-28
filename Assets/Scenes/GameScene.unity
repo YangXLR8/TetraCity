@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -450,11 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1030c1b114734d04cbbe4879b76eb4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks:
-  - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
-  - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
-  - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
-  - {fileID: 2384753024174117751, guid: aa88d271156e9467fba7dffa97e7f85f, type: 3}
 --- !u!4 &102342023
 Transform:
   m_ObjectHideFlags: 0
@@ -2213,6 +2208,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1834437271
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409980, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796659849100409981, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
+      propertyPath: m_Name
+      value: Dashed-Line
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f171a525868946aaa2e0f5c2296831c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2225,5 +2289,6 @@ SceneRoots:
   - {fileID: 954763291}
   - {fileID: 276613313}
   - {fileID: 1712277034}
+  - {fileID: 1834437271}
   - {fileID: 741014124}
   - {fileID: 834246673}
