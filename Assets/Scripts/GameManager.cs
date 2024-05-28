@@ -10,6 +10,7 @@ using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
+    # region singleton
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
     }
+
+    #endregion
 
     public void Start()
     {
@@ -59,5 +62,18 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(scene, LoadSceneMode.Single); 
         }
         
+    }
+
+    public static StageSetting setting = new();
+
+    public void LoadStage(StageSetting stage)
+    {
+        setting = stage;
+        FadeScene(
+            (PlayableDirector dir) => 
+                { 
+                    SceneManager.LoadScene("GameScene", LoadSceneMode.Single); 
+                }
+        );
     }
 }

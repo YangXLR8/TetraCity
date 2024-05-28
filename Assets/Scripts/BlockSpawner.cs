@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> blocks = new();
 
     public static List<GameObject> spawnedBlocks = new();
 
@@ -13,11 +12,12 @@ public class BlockSpawner : MonoBehaviour
     public static bool isBlockSpawned = false;
     public static bool isBlockDropped = false;
 
+    private List<GameObject> blocks = new();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        LoadBlocks();
     }
 
     // Update is called once per frame
@@ -27,8 +27,6 @@ public class BlockSpawner : MonoBehaviour
         {
             SpawnBlock();
         }
-
-        
     }
 
     public static void SaveBlock()
@@ -72,5 +70,14 @@ public class BlockSpawner : MonoBehaviour
         }
 
         return tallestY;
+    }
+
+    private void LoadBlocks()
+    {
+        for (int i = 0; i < GameManager.setting.blocks.Count; i++)
+        {
+            blocks.Add(GameManager.setting.blocks[i]);
+            print(i);
+        }
     }
 }

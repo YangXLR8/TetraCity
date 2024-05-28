@@ -56,11 +56,11 @@ public class LevelProgress
     public LevelProgress()
     {
         // 3 levels for level 1
-        for (int i = 0; i < 3; i++) Level1.Add(new LevelStage { id = i, isCompleted = false });
+        for (int i = 0; i < 3; i++) Level1.Add(new LevelStage { level = i, id = 1, isCompleted = false });
         // 4 levels for level 2
-        for (int i = 0; i < 4; i++) Level2.Add(new LevelStage { id = i, isCompleted = false });
+        for (int i = 0; i < 4; i++) Level2.Add(new LevelStage { level = i, id = 2, isCompleted = false });
         // 6 levels for level 3
-        for (int i = 0; i < 6; i++) Level3.Add(new LevelStage { id = i, isCompleted = false });
+        for (int i = 0; i < 6; i++) Level3.Add(new LevelStage { level = i, id = 3, isCompleted = false });
     }
 
     public List<LevelStage> Level1 = new();
@@ -71,6 +71,16 @@ public class LevelProgress
 [Serializable]
 public class LevelStage
 {
+    public int level;
     public int id;
     public bool isCompleted;
+}
+
+[Serializable]
+public class StageSetting
+{
+    public int level;
+    public int id;
+    public float height;
+    public List<GameObject> blocks;
 }
