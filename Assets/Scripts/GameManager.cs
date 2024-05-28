@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
-    private void FadeTransition(Action<PlayableDirector> callback)
+    private void FadeScene(Action<PlayableDirector> callback)
     {
         fadeToBlackScreen.SetActive(true);
 
@@ -36,13 +36,21 @@ public class GameManager : MonoBehaviour
         transition.Play();
     }
 
-    public void LoadScene(string scene)
+    public void LoadScene(string scene, bool isFade)
     {
-        FadeTransition(
-            (PlayableDirector dir) => 
-                { 
-                    SceneManager.LoadScene(scene, LoadSceneMode.Single); 
-                }
-        );
+        if (isFade)
+        {
+            FadeScene(
+                (PlayableDirector dir) => 
+                    { 
+                        SceneManager.LoadScene(scene, LoadSceneMode.Single); 
+                    }
+            );
+        }
+        else
+        {
+            SceneManager.LoadScene(scene, LoadSceneMode.Single); 
+        }
+        
     }  
 }

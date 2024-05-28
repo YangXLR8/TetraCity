@@ -22,6 +22,6 @@ public class MenuController : MonoBehaviour
     void OnClickChooseLevelsScene()
     {
         Button playScene = playButton.GetComponent<Button>();
-        playScene.onClick.AddListener(() => GameManager.Instance.LoadScene("ChooseLevels"));
+        playScene.onClick.AddListener(() => GameManager.Instance.LoadScene("LevelScene", true));
     }
 }

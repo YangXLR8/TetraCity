@@ -22,6 +22,6 @@ public class MainLevelController : MonoBehaviour
     void OnClickMenuScene()
     {
         Button homeScene = homeButton.GetComponent<Button>();
-        homeScene.onClick.AddListener(() => GameManager.Instance.LoadScene("MainMenu"));
+        homeScene.onClick.AddListener(() => GameManager.Instance.LoadScene("MenuScene", true));
     }
 }
