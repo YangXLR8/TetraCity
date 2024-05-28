@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         FadeScene(
             (PlayableDirector dir) => 
                 { 
-                    SceneManager.LoadScene("GameScene", LoadSceneMode.Single); 
+                    SceneManager.LoadScene($"GameScene_{stage.level}", LoadSceneMode.Single); 
                 }
         );
     }

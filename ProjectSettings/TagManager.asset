@@ -7,8 +7,8 @@ TagManager:
   - Platform
   - Block
   - Ground
-  - SL-completed
-  - SL-notCompleted
+  - Objective
+  - Danger
   layers:
   - Default
   - TransparentFX
