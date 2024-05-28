@@ -76,4 +76,15 @@ public class GameManager : MonoBehaviour
                 }
         );
     }
+
+    public static GameObject gameWinUI;
+    public static GameObject gameLoseUI;
+
+    public static bool isGameOver = false;
+
+    public static void GameLose()
+    {
+        isGameOver = true;
+        gameLoseUI.SetActive(true);
+    }
 }

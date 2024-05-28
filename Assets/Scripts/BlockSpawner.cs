@@ -25,7 +25,7 @@ public class BlockSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isBlockSpawned)
+        if (!isBlockSpawned && !GameManager.isGameOver)
         {
             SpawnBlock();
         }
@@ -57,6 +57,8 @@ public class BlockSpawner : MonoBehaviour
             temp.SetActive(false);
 
             currentBlock = stashedBlock;
+            currentBlock.SetActive(true);
+
             stashedBlock = temp;
         }
     }

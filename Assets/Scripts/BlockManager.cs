@@ -31,7 +31,7 @@ public class BlockManager : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Ground"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.isGameOver = true;
         }
     }
 }
