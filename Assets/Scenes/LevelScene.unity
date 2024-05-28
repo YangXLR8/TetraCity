@@ -1867,6 +1867,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   homeButton: {fileID: 392995099}
+  levelButtons:
+  - {fileID: 232686956}
+  - {fileID: 2023264650}
+  - {fileID: 436848878}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
