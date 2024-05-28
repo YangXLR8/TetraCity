@@ -5,6 +5,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +21,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static GameObject fadeToBlackScreen;
-
     private void Awake()
     {
         _instance = this;
+
+        print(Directory.localFolder);
     }
+
+    public static GameObject fadeToBlackScreen;
 
     private void FadeScene(Action<PlayableDirector> callback)
     {
@@ -52,5 +55,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(scene, LoadSceneMode.Single); 
         }
         
-    }  
+    }
+
+    public static SaveManager progress = new();
 }

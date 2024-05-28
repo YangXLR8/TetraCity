@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     [SerializeField] private List<Button> buttons = new();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,14 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnClickMenuScene()
+    {
+        foreach (Button button in buttons)
+        {
+            // Button homeScene = homeButton.GetComponent<Button>();
+            // homeScene.onClick.AddListener(() => GameManager.Instance.LoadScene("MenuScene", true));
+        }
     }
 }
