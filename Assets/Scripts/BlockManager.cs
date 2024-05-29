@@ -31,15 +31,26 @@ public class BlockManager : MonoBehaviour
                 BlockSpawner.SaveBlock();
                 isDropped = true;
             }
-            else
+            else if (BlockSpawner.isLastBlock && other.gameObject.CompareTag("Block"))
             {
+                BlockSpawner.SaveBlock();
                 for (int i = 0; i < BlockSpawner.spawnedBlocks.Count; i++)
                 {
                     Rigidbody rb = BlockSpawner.spawnedBlocks[i].GetComponent<Rigidbody>();
+
                     rb.isKinematic = false;
                     rb.useGravity = false;
+
+                    rb.velocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                    rb.Sleep();
                 }
+
                 GameManager.GameWin();
+            }
+            else 
+            {
+                GameManager.GameLose();
             }
         }
         if (other.gameObject.CompareTag("Ground"))

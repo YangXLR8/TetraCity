@@ -11,6 +11,7 @@ public class StageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateStar();
         OnClickGameScene();
     }
 
@@ -18,6 +19,18 @@ public class StageController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void UpdateStar()
+    {
+        if (SaveManager.GetClearedStatus(setting.level, setting.id))
+        {
+            transform.Find("Star_Outline").gameObject.SetActive(false);
+        }
+        else
+        {
+            transform.Find("Star_Filled").gameObject.SetActive(false);
+        }
     }
 
     private void OnClickGameScene()

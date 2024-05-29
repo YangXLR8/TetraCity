@@ -13,6 +13,35 @@ public class SaveManager : MonoBehaviour
         return System.IO.Directory.GetCurrentDirectory() + "\\Saves\\save.json";
     }
 
+    void Awake()
+    {
+        if (System.IO.Directory.Exists("\\Saves"))
+        {
+            System.IO.Directory.CreateDirectory("\\Saves");
+        }
+    }
+
+    public static bool GetClearedStatus(int level, int stage)
+    {
+        return level switch
+        {
+            1 => progress.Level1[stage - 1].isCompleted,
+            2 => progress.Level2[stage - 1].isCompleted,
+            3 => progress.Level3[stage - 1].isCompleted,
+            _ => false,
+        };
+    }
+
+    public static void SetClearedStatus(int level, int stage, bool status)
+    {
+        switch (level)
+        {
+            case 1: progress.Level1[stage - 1].isCompleted = status; break;
+            case 2: progress.Level2[stage - 1].isCompleted = status; break;
+            case 3: progress.Level3[stage - 1].isCompleted = status; break;
+        }
+    }
+
     public static int GetClearedStages(string level)
     {
         List<LevelStage> levelList = new();
@@ -29,21 +58,16 @@ public class SaveManager : MonoBehaviour
         return clearedStages;
     }
 
-    public static void Default()
-    {
-        System.IO.File.WriteAllText(GetSavePath(), JsonUtility.ToJson(progress));
-    }
-
     public static void Save()
     {
-        
+        System.IO.File.WriteAllText(GetSavePath(), JsonUtility.ToJson(progress, true));
     }
 
     public static void Read()
     {
         if (!System.IO.File.Exists(GetSavePath()))
         {
-            Default();
+            Save();
         }
 
         progress = JsonUtility.FromJson<LevelProgress>(System.IO.File.ReadAllText(GetSavePath()));
@@ -56,11 +80,11 @@ public class LevelProgress
     public LevelProgress()
     {
         // 3 levels for level 1
-        for (int i = 0; i < 3; i++) Level1.Add(new LevelStage { level = i, id = 1, isCompleted = false });
+        for (int i = 0; i < 3; i++) Level1.Add(new LevelStage { level = 1, id = i, isCompleted = false });
         // 4 levels for level 2
-        for (int i = 0; i < 4; i++) Level2.Add(new LevelStage { level = i, id = 2, isCompleted = false });
-        // 6 levels for level 3
-        for (int i = 0; i < 6; i++) Level3.Add(new LevelStage { level = i, id = 3, isCompleted = false });
+        for (int i = 0; i < 4; i++) Level2.Add(new LevelStage { level = 2, id = i, isCompleted = false });
+        // 9 levels for level 3
+        for (int i = 0; i < 9; i++) Level3.Add(new LevelStage { level = 3, id = i, isCompleted = false });
     }
 
     public List<LevelStage> Level1 = new();

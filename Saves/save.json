@@ -1,1 +1,88 @@
-{"Level1":[{"id":0,"isCompleted":false},{"id":1,"isCompleted":false},{"id":2,"isCompleted":false}],"Level2":[{"id":0,"isCompleted":false},{"id":1,"isCompleted":false},{"id":2,"isCompleted":false},{"id":3,"isCompleted":false}],"Level3":[{"id":0,"isCompleted":false},{"id":1,"isCompleted":false},{"id":2,"isCompleted":false},{"id":3,"isCompleted":false},{"id":4,"isCompleted":false},{"id":5,"isCompleted":false}]}
+{
+    "Level1": [
+        {
+            "level": 1,
+            "id": 0,
+            "isCompleted": true
+        },
+        {
+            "level": 1,
+            "id": 1,
+            "isCompleted": true
+        },
+        {
+            "level": 1,
+            "id": 2,
+            "isCompleted": true
+        }
+    ],
+    "Level2": [
+        {
+            "level": 2,
+            "id": 0,
+            "isCompleted": false
+        },
+        {
+            "level": 2,
+            "id": 1,
+            "isCompleted": false
+        },
+        {
+            "level": 2,
+            "id": 2,
+            "isCompleted": false
+        },
+        {
+            "level": 2,
+            "id": 3,
+            "isCompleted": false
+        }
+    ],
+    "Level3": [
+        {
+            "level": 3,
+            "id": 0,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 1,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 2,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 3,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 4,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 5,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 6,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 7,
+            "isCompleted": false
+        },
+        {
+            "level": 3,
+            "id": 8,
+            "isCompleted": false
+        }
+    ]
+}

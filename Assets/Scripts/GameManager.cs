@@ -93,6 +93,9 @@ public class GameManager : MonoBehaviour
 
     public static void GameWin()
     {
+        SaveManager.SetClearedStatus(setting.level, setting.id, true);
+        SaveManager.Save();
+
         isGameOver = true;
         gameWinUI.SetActive(true);
         fadeToBlackScreen.transform.SetParent(gameWinUI.transform, false);
