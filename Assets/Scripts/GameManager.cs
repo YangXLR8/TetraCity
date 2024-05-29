@@ -1,12 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +21,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+
+        #if UNITY_STANDALONE
+        Screen.SetResolution(540, 960, false);
+        Screen.fullScreen = false;
+        #endif
     }
 
     #endregion

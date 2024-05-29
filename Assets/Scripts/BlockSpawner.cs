@@ -109,6 +109,31 @@ public class BlockSpawner : MonoBehaviour
         }
     }
 
+    public static void FreezeBlocks()
+    {
+
+        for (int i = 0; i < spawnedBlocks.Count; i++)
+        {
+            Rigidbody rbBlock = spawnedBlocks[i].GetComponent<Rigidbody>();
+
+            rbBlock.isKinematic = false;
+            rbBlock.useGravity = false;
+
+            rbBlock.velocity = Vector3.zero;
+            rbBlock.angularVelocity = Vector3.zero;
+            rbBlock.Sleep();
+        }
+
+        Rigidbody rbCurrent = currentBlock.GetComponent<Rigidbody>();
+
+        rbCurrent.isKinematic = false;
+        rbCurrent.useGravity = false;
+
+        rbCurrent.velocity = Vector3.zero;
+        rbCurrent.angularVelocity = Vector3.zero;
+        rbCurrent.Sleep();
+    }
+
     public static float FindTallest()
     {
         float tallestY = 0;

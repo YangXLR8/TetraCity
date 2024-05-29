@@ -411,8 +411,20 @@ MonoBehaviour:
   setting:
     level: 3
     id: 7
-    height: 0
-    blocks: []
+    height: 20
+    blocks:
+    - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+    - {fileID: 7472905588389341504, guid: 112f1226ba0324b8e917ce376878b085, type: 3}
+    - {fileID: 4760357814733417165, guid: 3b4cee93269314dfc85ed298f41fff63, type: 3}
+    - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
+    - {fileID: 5563651595801186900, guid: b972c26c075f14879898ebdb9eb51962, type: 3}
+    - {fileID: 8877614523585705395, guid: a9bc96e6d313c451aa42628398988630, type: 3}
+    - {fileID: 2636531475470325763, guid: 4a9590180551043839fd03f769b95e88, type: 3}
+    - {fileID: 6763892259139563788, guid: b8d4de735ce7d4d2d85cf234285bc8bd, type: 3}
+    - {fileID: 3706089334739513954, guid: 7b7af494b570d4504b62c64448dc9169, type: 3}
+    - {fileID: 7469006022171896316, guid: 5a416a319991348e980be45330ff01f7, type: 3}
+    - {fileID: 972297553027340064, guid: e2df45e2ac78f4e569ed32a54bb32bd2, type: 3}
+    - {fileID: 8523323406030413940, guid: 9e94a62582b514a4cb8c75034ea5d3bd, type: 3}
   stageButton: {fileID: 333877144}
 --- !u!1 &396199493
 GameObject:
@@ -649,8 +661,30 @@ MonoBehaviour:
   setting:
     level: 3
     id: 9
-    height: 0
-    blocks: []
+    height: 25
+    blocks:
+    - {fileID: 1326644427269672346, guid: 36c74e512dafa4637b8c1ff2d0e735b8, type: 3}
+    - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+    - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+    - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
+    - {fileID: 7952844166610551183, guid: b56ef5241de564f43a00ec6d67c5c61c, type: 3}
+    - {fileID: 2636531475470325763, guid: 4a9590180551043839fd03f769b95e88, type: 3}
+    - {fileID: 7469006022171896316, guid: 5a416a319991348e980be45330ff01f7, type: 3}
+    - {fileID: 2384753024174117751, guid: aa88d271156e9467fba7dffa97e7f85f, type: 3}
+    - {fileID: 2238838986047687125, guid: 3c5ebf956b36e174296102b3a2229fd0, type: 3}
+    - {fileID: 7472905588389341504, guid: 112f1226ba0324b8e917ce376878b085, type: 3}
+    - {fileID: 5563651595801186900, guid: b972c26c075f14879898ebdb9eb51962, type: 3}
+    - {fileID: 4823177606272654952, guid: 9df3a49f1f5094869a6bd5d398efb52f, type: 3}
+    - {fileID: 6763892259139563788, guid: b8d4de735ce7d4d2d85cf234285bc8bd, type: 3}
+    - {fileID: 972297553027340064, guid: e2df45e2ac78f4e569ed32a54bb32bd2, type: 3}
+    - {fileID: 970923665258299692, guid: 97764761dc33a4dd49fba8ec2ee70b37, type: 3}
+    - {fileID: 7298159845134030183, guid: 7fd9c878a8f49924a99abc32ac7e25eb, type: 3}
+    - {fileID: 4760357814733417165, guid: 3b4cee93269314dfc85ed298f41fff63, type: 3}
+    - {fileID: 8877614523585705395, guid: a9bc96e6d313c451aa42628398988630, type: 3}
+    - {fileID: 6389922747906461806, guid: c556178b8ebeb44c3ab3f78d7bb769ed, type: 3}
+    - {fileID: 3706089334739513954, guid: 7b7af494b570d4504b62c64448dc9169, type: 3}
+    - {fileID: 8523323406030413940, guid: 9e94a62582b514a4cb8c75034ea5d3bd, type: 3}
+    - {fileID: 7526809814890872536, guid: a7a12b7dbcb4a44f286973e0f1a2e71e, type: 3}
   stageButton: {fileID: 525063731}
 --- !u!1 &601268173
 GameObject:
@@ -985,8 +1019,14 @@ MonoBehaviour:
   setting:
     level: 3
     id: 2
-    height: 0
-    blocks: []
+    height: 10
+    blocks:
+    - {fileID: 7469006022171896316, guid: 5a416a319991348e980be45330ff01f7, type: 3}
+    - {fileID: 972297553027340064, guid: e2df45e2ac78f4e569ed32a54bb32bd2, type: 3}
+    - {fileID: 8523323406030413940, guid: 9e94a62582b514a4cb8c75034ea5d3bd, type: 3}
+    - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
+    - {fileID: 5563651595801186900, guid: b972c26c075f14879898ebdb9eb51962, type: 3}
+    - {fileID: 4760357814733417165, guid: 3b4cee93269314dfc85ed298f41fff63, type: 3}
   stageButton: {fileID: 694287922}
 --- !u!1 &744854355
 GameObject:
@@ -1276,8 +1316,11 @@ MonoBehaviour:
   setting:
     level: 3
     id: 4
-    height: 0
-    blocks: []
+    height: 15
+    blocks:
+    - {fileID: 7469006022171896316, guid: 5a416a319991348e980be45330ff01f7, type: 3}
+    - {fileID: 972297553027340064, guid: e2df45e2ac78f4e569ed32a54bb32bd2, type: 3}
+    - {fileID: 8523323406030413940, guid: 9e94a62582b514a4cb8c75034ea5d3bd, type: 3}
   stageButton: {fileID: 835357215}
 --- !u!1001 &878994928
 PrefabInstance:
@@ -1542,8 +1585,23 @@ MonoBehaviour:
   setting:
     level: 3
     id: 8
-    height: 0
-    blocks: []
+    height: 20
+    blocks:
+    - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+    - {fileID: 2238838986047687125, guid: 3c5ebf956b36e174296102b3a2229fd0, type: 3}
+    - {fileID: 7298159845134030183, guid: 7fd9c878a8f49924a99abc32ac7e25eb, type: 3}
+    - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+    - {fileID: 7472905588389341504, guid: 112f1226ba0324b8e917ce376878b085, type: 3}
+    - {fileID: 4760357814733417165, guid: 3b4cee93269314dfc85ed298f41fff63, type: 3}
+    - {fileID: 7952844166610551183, guid: b56ef5241de564f43a00ec6d67c5c61c, type: 3}
+    - {fileID: 4823177606272654952, guid: 9df3a49f1f5094869a6bd5d398efb52f, type: 3}
+    - {fileID: 6389922747906461806, guid: c556178b8ebeb44c3ab3f78d7bb769ed, type: 3}
+    - {fileID: 7469006022171896316, guid: 5a416a319991348e980be45330ff01f7, type: 3}
+    - {fileID: 972297553027340064, guid: e2df45e2ac78f4e569ed32a54bb32bd2, type: 3}
+    - {fileID: 8523323406030413940, guid: 9e94a62582b514a4cb8c75034ea5d3bd, type: 3}
+    - {fileID: 2384753024174117751, guid: aa88d271156e9467fba7dffa97e7f85f, type: 3}
+    - {fileID: 970923665258299692, guid: 97764761dc33a4dd49fba8ec2ee70b37, type: 3}
+    - {fileID: 7526809814890872536, guid: a7a12b7dbcb4a44f286973e0f1a2e71e, type: 3}
   stageButton: {fileID: 914466031}
 --- !u!1 &918460358
 GameObject:
@@ -1983,8 +2041,14 @@ MonoBehaviour:
   setting:
     level: 3
     id: 3
-    height: 0
-    blocks: []
+    height: 10
+    blocks:
+    - {fileID: 1182639562868850930, guid: 98c835ff0ba6e4488a12084d3ecbc0b5, type: 3}
+    - {fileID: 5563651595801186900, guid: b972c26c075f14879898ebdb9eb51962, type: 3}
+    - {fileID: 8877614523585705395, guid: a9bc96e6d313c451aa42628398988630, type: 3}
+    - {fileID: 7952844166610551183, guid: b56ef5241de564f43a00ec6d67c5c61c, type: 3}
+    - {fileID: 4823177606272654952, guid: 9df3a49f1f5094869a6bd5d398efb52f, type: 3}
+    - {fileID: 6389922747906461806, guid: c556178b8ebeb44c3ab3f78d7bb769ed, type: 3}
   stageButton: {fileID: 1291328879}
 --- !u!1 &1357064588
 GameObject:
@@ -2634,8 +2698,14 @@ MonoBehaviour:
   setting:
     level: 3
     id: 1
-    height: 0
-    blocks: []
+    height: 10
+    blocks:
+    - {fileID: 8840716603233920026, guid: 34e3ee1a210c97b498476178bc283faa, type: 3}
+    - {fileID: 2238838986047687125, guid: 3c5ebf956b36e174296102b3a2229fd0, type: 3}
+    - {fileID: 7298159845134030183, guid: 7fd9c878a8f49924a99abc32ac7e25eb, type: 3}
+    - {fileID: 2384753024174117751, guid: aa88d271156e9467fba7dffa97e7f85f, type: 3}
+    - {fileID: 970923665258299692, guid: 97764761dc33a4dd49fba8ec2ee70b37, type: 3}
+    - {fileID: 7526809814890872536, guid: a7a12b7dbcb4a44f286973e0f1a2e71e, type: 3}
   stageButton: {fileID: 1443683450}
 --- !u!1 &1463576487
 GameObject:
@@ -3245,8 +3315,18 @@ MonoBehaviour:
   setting:
     level: 3
     id: 6
-    height: 0
-    blocks: []
+    height: 15
+    blocks:
+    - {fileID: 1326644427269672346, guid: 36c74e512dafa4637b8c1ff2d0e735b8, type: 3}
+    - {fileID: 7952844166610551183, guid: b56ef5241de564f43a00ec6d67c5c61c, type: 3}
+    - {fileID: 6389922747906461806, guid: c556178b8ebeb44c3ab3f78d7bb769ed, type: 3}
+    - {fileID: 4823177606272654952, guid: 9df3a49f1f5094869a6bd5d398efb52f, type: 3}
+    - {fileID: 2636531475470325763, guid: 4a9590180551043839fd03f769b95e88, type: 3}
+    - {fileID: 6763892259139563788, guid: b8d4de735ce7d4d2d85cf234285bc8bd, type: 3}
+    - {fileID: 3706089334739513954, guid: 7b7af494b570d4504b62c64448dc9169, type: 3}
+    - {fileID: 8596015780596970451, guid: 396fcfccbd9754887b2ebefa7392040c, type: 3}
+    - {fileID: 7472905588389341504, guid: 112f1226ba0324b8e917ce376878b085, type: 3}
+    - {fileID: 4760357814733417165, guid: 3b4cee93269314dfc85ed298f41fff63, type: 3}
   stageButton: {fileID: 1702916189}
 --- !u!1 &1733217295
 GameObject:
@@ -3727,8 +3807,14 @@ MonoBehaviour:
   setting:
     level: 3
     id: 5
-    height: 0
-    blocks: []
+    height: 15
+    blocks:
+    - {fileID: 7952844166610551183, guid: b56ef5241de564f43a00ec6d67c5c61c, type: 3}
+    - {fileID: 4823177606272654952, guid: 9df3a49f1f5094869a6bd5d398efb52f, type: 3}
+    - {fileID: 6389922747906461806, guid: c556178b8ebeb44c3ab3f78d7bb769ed, type: 3}
+    - {fileID: 2636531475470325763, guid: 4a9590180551043839fd03f769b95e88, type: 3}
+    - {fileID: 6763892259139563788, guid: b8d4de735ce7d4d2d85cf234285bc8bd, type: 3}
+    - {fileID: 3706089334739513954, guid: 7b7af494b570d4504b62c64448dc9169, type: 3}
   stageButton: {fileID: 2044076942}
 --- !u!1 &2144890616
 GameObject:
