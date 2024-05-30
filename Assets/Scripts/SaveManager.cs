@@ -15,7 +15,7 @@ public class SaveManager : MonoBehaviour
 
     void Awake()
     {
-        if (System.IO.Directory.Exists("\\Saves"))
+        if (!System.IO.Directory.Exists("\\Saves"))
         {
             System.IO.Directory.CreateDirectory("\\Saves");
         }
@@ -54,7 +54,7 @@ public class SaveManager : MonoBehaviour
         {
             if (levelStage.isCompleted) clearedStages++;
         }
-
+    
         return clearedStages;
     }
 

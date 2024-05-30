@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class BlockManager : MonoBehaviour
 {
     private bool isDropped = false;
+    private bool isSfxPlayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,9 @@ public class BlockManager : MonoBehaviour
             }
             else if (BlockSpawner.isLastBlock && other.gameObject.CompareTag("Block"))
             {
+                SoundManager.Instance.PlaySfx("BlockImpact");
+                isSfxPlayed = true;
+
                 BlockSpawner.SaveBlock();
                 BlockSpawner.FreezeBlocks();
 
@@ -41,10 +45,21 @@ public class BlockManager : MonoBehaviour
             else 
             {
                 GameManager.GameLose();
+                
+                isDropped = true;
             }
+        }
+        if (isDropped && !isSfxPlayed)
+        {
+            SoundManager.Instance.PlaySfx("BlockImpact");
+
+            isSfxPlayed = true;
         }
         if (other.gameObject.CompareTag("Ground"))
         {
+            SoundManager.Instance.PlaySfx("BlockImpact");
+            isSfxPlayed = true;
+            
             BlockSpawner.FreezeBlocks();
             GameManager.GameLose();
         }

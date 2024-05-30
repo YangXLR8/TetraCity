@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.PlayBgm("Game");
+
         cameraObject = GameObject.Find("Game Camera");
         cameraTargetPosition = cameraObject.transform.position;
 
@@ -41,20 +43,8 @@ public class PlayerController : MonoBehaviour
             BlockSpawner.DropBlock();
         }
 
-        // If inputmanager horizontal negative buttons are pressed
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            // AccessPreviousBlock();
-        }
-
-        // If inputmanager horizontal positive buttons are pressed
-        if (Input.GetAxisRaw("Horizontal") > 0)
-        {
-            // AccessNextBlock();
-        }
-
         // If inputmanager stash buttons are pressed
-        if (Input.GetButtonDown("Stash"))
+        if (Input.GetButtonDown("Stash") && !BlockSpawner.isLastBlock)
         {
             if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped && !GameManager.isGameOver)
             {
@@ -63,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // If inputmanager rotate buttons are pressed
-        if (Input.GetButtonDown("Rotate"))
+        if (Input.GetButtonDown("Rotate") && !BlockSpawner.isLastBlock)
         {
             if (BlockSpawner.isBlockSpawned && !BlockSpawner.isBlockDropped && !GameManager.isGameOver)
             {

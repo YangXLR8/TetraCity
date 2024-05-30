@@ -10,6 +10,8 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.PlayBgm("Main");
+        
         OnClickChooseLevelsScene();
     }
 
@@ -21,6 +23,11 @@ public class MenuController : MonoBehaviour
 
     void OnClickChooseLevelsScene()
     {
-        playButton.onClick.AddListener(() => GameManager.Instance.LoadScene("LevelScene", true));
+        playButton.onClick.AddListener(() => SoundManager.Instance.PlaySfx("ButtonClick"));
+        playButton.onClick.AddListener(() => 
+            {
+                GameManager.Instance.LoadScene("LevelScene", true);
+            }
+        );
     }
 }

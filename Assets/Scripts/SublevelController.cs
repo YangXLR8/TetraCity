@@ -10,6 +10,8 @@ public class SublevelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Instance.PlayBgm("Main");
+        
         OnClickMenuScene();
     }
 
@@ -21,6 +23,7 @@ public class SublevelController : MonoBehaviour
 
     void OnClickMenuScene()
     {
+        backButton.onClick.AddListener(() => SoundManager.Instance.PlaySfx("ButtonClick"));
         backButton.onClick.AddListener(() => GameManager.Instance.LoadScene("LevelScene", true));
     }
 }

@@ -26,11 +26,13 @@ public class GameLoseController : MonoBehaviour
 
     void OnClickLevelScene()
     {
+        backButtton.onClick.AddListener(() => SoundManager.Instance.PlaySfx("ButtonClick"));
         backButtton.onClick.AddListener(() => GameManager.Instance.LoadScene("LevelScene", true));
     }
 
     void OnClickRestartScene()
     {
+        restartButtton.onClick.AddListener(() => SoundManager.Instance.PlaySfx("ButtonClick"));
         restartButtton.onClick.AddListener(() => GameManager.Instance.LoadStage(GameManager.setting));
     }
 }

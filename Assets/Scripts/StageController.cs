@@ -35,6 +35,7 @@ public class StageController : MonoBehaviour
 
     private void OnClickGameScene()
     {
+        stageButton.onClick.AddListener(() => SoundManager.Instance.PlaySfx("ButtonClick"));
         stageButton.onClick.AddListener(() => GameManager.Instance.LoadStage(setting));
     }
 }
