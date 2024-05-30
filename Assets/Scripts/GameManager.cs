@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour
         );
     }
 
+    public static bool isTutorial = true;
+
     public static GameObject gameWinUI;
     public static GameObject gameLoseUI;
 

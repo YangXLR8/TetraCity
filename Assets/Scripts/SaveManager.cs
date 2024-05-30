@@ -13,12 +13,14 @@ public class SaveManager : MonoBehaviour
         return System.IO.Directory.GetCurrentDirectory() + "\\Saves\\save.json";
     }
 
+    public static string GetSaveDirectory()
+    {
+        return System.IO.Directory.GetCurrentDirectory() + "\\Saves";
+    }
+
     void Awake()
     {
-        if (!System.IO.Directory.Exists("\\Saves"))
-        {
-            System.IO.Directory.CreateDirectory("\\Saves");
-        }
+        
     }
 
     public static bool GetClearedStatus(int level, int stage)
@@ -65,6 +67,10 @@ public class SaveManager : MonoBehaviour
 
     public static void Read()
     {
+        if (!System.IO.Directory.Exists(GetSaveDirectory()))
+        {
+            System.IO.Directory.CreateDirectory(GetSaveDirectory());
+        }
         if (!System.IO.File.Exists(GetSavePath()))
         {
             Save();

@@ -30,12 +30,12 @@
         {
             "level": 2,
             "id": 2,
-            "isCompleted": false
+            "isCompleted": true
         },
         {
             "level": 2,
             "id": 3,
-            "isCompleted": false
+            "isCompleted": true
         }
     ],
     "Level3": [

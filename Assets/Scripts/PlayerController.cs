@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private GameObject cameraObject;
 
     private int direction = 1;
+    private float baseSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -29,16 +30,18 @@ public class PlayerController : MonoBehaviour
         SoundManager.Instance.PlayBgm("Game");
 
         cameraObject = GameObject.Find("Game Camera");
-        cameraTargetPosition = cameraObject.transform.position;
 
+        cameraTargetPosition = cameraObject.transform.position;
         clawTargetPosition = transform.position;
+
+        baseSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
          // If inputmanager drop button is pressed
-        if (Input.GetButtonDown("Drop") && BlockSpawner.isBlockDropped == false && !GameManager.isGameOver)
+        if (Input.GetButtonDown("Drop") && BlockSpawner.isBlockDropped == false && !GameManager.isGameOver && !GameManager.isTutorial)
         {
             BlockSpawner.DropBlock();
         }
@@ -61,8 +64,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        MoveClaw();
         AdjustClaw();
+        AdjustSpeed();
+        MoveClaw();
     }
 
     private void LateUpdate()
@@ -81,6 +85,13 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.up * offset;
             cameraTargetPosition += offset * Vector3.up;
         }
+    }
+
+    private void AdjustSpeed()
+    {
+        if (BlockSpawner.FindTallest() < 5) moveSpeed = baseSpeed * 1.3f;
+        else if (BlockSpawner.FindTallest() < 10) moveSpeed = baseSpeed * 1.6f;
+        else if (BlockSpawner.FindTallest() < 15) moveSpeed = baseSpeed * 2f;
     }
 
     private void MoveClaw()
