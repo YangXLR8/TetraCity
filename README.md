@@ -65,7 +65,7 @@ The game project utilized free assets from the Unity Asset Store, including the 
   <img width="700" src="https://github.com/YangXLR8/TetraCity/blob/main/Documentation/10.png" alt="cli output"/>
 </p>
 
-## Colaborators
+## Collaborators
 
 👤 **Cantiller, Sophia Feona** - Github: [@SophiaCantiller](https://github.com/SophiaCantiller)
 
